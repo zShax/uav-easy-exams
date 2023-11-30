@@ -1,0 +1,86 @@
+.f {
+  &c {
+    &--black {
+      color: #000;
+    }
+    &--important {
+      color: $font-important;
+    }
+    &--warning {
+      color: $font-warning;
+    }
+    &--info {
+      color: $font-info;
+    }
+    &--secondary {
+      color: $font-secondary;
+    }
+  }
+
+  &w {
+    &--500 {
+      font-weight: 500;
+    }
+    &--700 {
+      font-weight: 700;
+    }
+    &--900 {
+      font-weight: 900;
+    }
+  }
+}
+
+.link {
+  &--secondary,
+  &--secondary:active {
+    transition: color $transition-05;
+
+    color: $font-secondary;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: #000;
+    }
+  }
+}
+
+.button {
+  &--black {
+    transition: border-color $transition-05, background-color $transition-05,
+      color $transition-05;
+    cursor: pointer;
+
+    font-weight: 500;
+    background-color: #000;
+    color: #fff;
+
+    width: 10em;
+
+    margin-top: 2em;
+
+    box-shadow: $box-shadow-L-bottom;
+
+    border: 1px solid $accent-secondary;
+    border-color: #000;
+    border-radius: 4px;
+
+    padding: 0.5em 0;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+
+// $font-secondary: #727272;
+
+// $accent-secondary: #c3c3c3;
+
+// $background-secondary: #d2d2d2;
+
+// $box-shadow-L-bottom: 2px 5px #8888880f;
+
+// $transition-05: 0.5s cubic-bezier(0.4, 0, 0.2, 1);

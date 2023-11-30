@@ -1,0 +1,24 @@
+.main__header {
+  @include flex(row, space-between, normal);
+
+  font-size: 14px;
+
+  background-color: #fff;
+
+  padding: 1em 2em;
+
+  border-bottom: 1px solid $accent-secondary;
+
+  p {
+    margin: 0;
+  }
+
+  // Adjust copyright text to fit on mobile
+  @media screen and (max-width: 425px) {
+    padding: 2em 2em;
+
+    p {
+      width: 150px;
+    }
+  }
+}

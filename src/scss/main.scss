@@ -1,0 +1,28 @@
+// Global Utilities
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Montserrat:wght@400;500;700;900&display=swap');
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/reusables';
+
+// Global Layout Elements
+@import './layout/header';
+@import './layout/section';
+@import './layout/footer';
+
+// Local Components
+@import './components/page-index';
+@import './components/page-login';
+@import './components/page-admin-profile';
+
+.debug {
+  border: 1px solid #f00;
+  color: #0f0;
+  background-color: #00f;
+}
+
+body {
+  font-family: 'Montserrat';
+  box-sizing: border-box;
+  background-color: $background-secondary;
+}
