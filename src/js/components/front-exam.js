@@ -1,4 +1,4 @@
-// exam constant here
+import { baseURL } from '../index';
 
 // Exam answers array
 
@@ -103,3 +103,38 @@ document.getElementById('formExam').addEventListener('submit', event => {
 
   console.dir(examOutput);
 });
+
+// Timer Function
+
+// Function to calculate remaining time and update HTML element
+function updateRemainingTime() {
+  const currentDate = new Date(); // Current date and time
+  const endDate = new Date(examData.endTime); // End date and time
+
+  // Check if the current date is before the end date
+  if (currentDate < endDate) {
+    const timeDiff = endDate - currentDate; // Difference in milliseconds
+    const seconds = Math.floor((timeDiff / 1000) % 60);
+    const minutes = Math.floor((timeDiff / 1000 / 60) % 60);
+    const hours = Math.floor((timeDiff / 1000 / 3600) % 24);
+    const days = Math.floor(timeDiff / (1000 * 3600 * 24));
+
+    // Get the HTML element by its ID
+    const timerElement = document.getElementById('remainingTime');
+
+    // Update the inner text of the HTML element
+    timerElement.innerText = `Remaining Time: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  } else {
+    // Get the HTML element by its ID
+    const timerElement = document.getElementById('remainingTime');
+
+    // Update the inner text of the HTML element for the case where the end date has passed
+    timerElement.innerText = 'The end date has already passed.';
+  }
+}
+
+// Call the function initially
+updateRemainingTime();
+
+// Update the remaining time every second (adjust the interval as needed)
+setInterval(updateRemainingTime, 1000);

@@ -4,7 +4,7 @@
 
   height: 100%;
 
-  background-color: $background-secondary;
+  background-color: #fff;
 
   //   Make cards be next to each other on pc
   @media screen and (min-width: 1024px) {
@@ -14,18 +14,23 @@
   //   Make each section a card
   & > section {
     @include flex(column, center, center);
-
-    transition: $transition-05;
+    box-sizing: border-box;
+    transition: border-color $transition-05;
 
     box-shadow: 4px 10px 5px #2424240f;
     background-color: #fff;
 
     width: 100%;
     height: calc(100% / 3);
+    @media screen and (min-width: 1024px) {
+      height: 95%;
+    }
+
+    border: 1px solid $accent-secondary;
 
     &:hover,
     &:focus {
-      background-color: rgb(245, 233, 233);
+      border-color: #000;
     }
   }
 
@@ -33,6 +38,12 @@
     border: 1px solid #000;
 
     background-color: #fff;
+
+    width: 80%;
+    height: 80%;
+    @media screen and (min-width: 1024px) {
+      height: 40%;
+    }
 
     & th,
     & td {
@@ -52,6 +63,17 @@
 
       background-color: #000;
       color: #fff;
+    }
+
+    @media screen and (min-width: 426px) {
+      & .admin-profile__table__title {
+        font-size: 14px;
+      }
+
+      & th,
+      & td {
+        font-size: 12px;
+      }
     }
   }
 }

@@ -10,11 +10,9 @@
 
   padding: 2em 6%;
 
-  border-top: 1px solid $accent-secondary;
-
   // Adjust copyright text to fit on mobile
   @media screen and (max-width: 425px) {
-    height: 12%;
+    height: 14%;
 
     p {
       width: 150px;

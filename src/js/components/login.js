@@ -13,9 +13,18 @@ document.getElementById('loginForm').addEventListener('submit', event => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-    .then(response => response.json())
+    .then(response => {
+      // verify if access is granted
+      if (response.status === 200) {
+        return response.json(); // return the parsed JSON
+      } else {
+        throw new Error('Access denied');
+      }
+    })
     .then(body => {
-      alert(body);
+      // now you can use the parsed body
+      localStorage.setItem('Id', body.id);
+      location.href = 'profile.html';
     })
     .catch(error => {
       console.error('Error:', error);
