@@ -1,21 +1,20 @@
 .main__footer {
   @include flex(row, space-between, normal);
 
+  box-sizing: border-box;
+
   font-size: 14px;
+  height: 10%;
 
   background-color: #fff;
 
-  padding: 3em 2em;
+  padding: 2em 6%;
 
   border-top: 1px solid $accent-secondary;
 
-  p {
-    margin: 0;
-  }
-
   // Adjust copyright text to fit on mobile
   @media screen and (max-width: 425px) {
-    padding: 2em 2em;
+    height: 12%;
 
     p {
       width: 150px;

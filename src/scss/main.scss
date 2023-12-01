@@ -24,5 +24,10 @@
 body {
   font-family: 'Montserrat';
   box-sizing: border-box;
+  height: 100vh; // Make body as large as the screen's y height
   background-color: $background-secondary;
+}
+
+p {
+  margin: 0;
 }

@@ -1,0 +1,9 @@
+.section {
+  box-sizing: border-box;
+  max-height: 80%;
+  padding: 1em 6%;
+
+  @media screen and (max-width: 425px) {
+    max-height: 78%;
+  }
+}

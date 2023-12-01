@@ -1,22 +1,39 @@
-<main class="admin-profile">
+<main class="admin-profile section">
   <!-- Profile Section -->
-  <section id="profile">
-    <h2>Profile</h2>
-    <div>
-      <p><strong>ID:</strong> Your ID</p>
-      <p><strong>Name:</strong> Your Name</p>
-      <p><strong>Email:</strong> Your Email</p>
-    </div>
+  <section class="admin-profile__table">
+    <h2>Information</h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="admin-profile__table__title" colspan="2">Profile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ID</td>
+          <td id="profileId">1234</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td id="profileName">Marius Toma</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td id="profileEmail">toma.marius@uav.ro</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
   </section>
 
   <!-- Create New Section -->
-  <section id="section">
+  <section class="admin-profile__create-test">
     <h2>Create New Test</h2>
     <!-- Add your form or content for creating a new test here -->
   </section>
 
   <!-- History Section -->
-  <section id="history">
+  <section class="admin-profile__test-history">
     <h2>Test History</h2>
     <!-- Add content to display the history of previously created tests here -->
   </section>

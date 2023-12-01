@@ -1,0 +1,57 @@
+.admin-profile {
+  @include flex(column, space-between, center);
+  gap: 1em;
+
+  height: 100%;
+
+  background-color: $background-secondary;
+
+  //   Make cards be next to each other on pc
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  //   Make each section a card
+  & > section {
+    @include flex(column, center, center);
+
+    transition: $transition-05;
+
+    box-shadow: 4px 10px 5px #2424240f;
+    background-color: #fff;
+
+    width: 100%;
+    height: calc(100% / 3);
+
+    &:hover,
+    &:focus {
+      background-color: rgb(245, 233, 233);
+    }
+  }
+
+  &__table table {
+    border: 1px solid #000;
+
+    background-color: #fff;
+
+    & th,
+    & td {
+      text-align: left;
+
+      font-size: 10px;
+
+      border: 1px solid #000;
+
+      padding: 0.25em 1em;
+    }
+
+    & .admin-profile__table__title {
+      padding: 0.5em 0.8em;
+
+      font-size: 12px;
+
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
