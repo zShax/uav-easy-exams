@@ -1,0 +1,2 @@
+document.getElementById("loginForm").addEventListener("submit",(e=>{e.preventDefault(),fetch("http://16.16.137.163:5000/api/login",{method:"POST",body:JSON.stringify({email:document.getElementById("loginEmail").value,password:document.getElementById("loginPassword").value}),headers:{"Content-type":"application/json; charset=UTF-8"}}).then((e=>{if(200===e.status)return e.json();throw new Error("Access denied")})).then((e=>{localStorage.setItem("Id",e.id),location.href="profile.html"})).catch((e=>{console.error("Error:",e)}))}));
+//# sourceMappingURL=index.5af20a9d.js.map

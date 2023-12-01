@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",(()=>{fetch(`http://16.16.137.163:5000/api/teacher/${localStorage.getItem("Id")}/profile`,{method:"GET"}).then((e=>e.json())).then((e=>{var t,n,d,m,i;t=e,n=document.getElementById("profileId"),d=document.getElementById("profileFirstName"),m=document.getElementById("profileLastName"),i=document.getElementById("profileEmail"),n.innerText=t.id,d.innerText=t.first_name,m.innerText=t.last_name,i.innerText=t.email}))}));
+//# sourceMappingURL=profile.38db0f8d.js.map

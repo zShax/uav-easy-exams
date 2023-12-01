@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",(function(){fetch("http://16.16.137.163:5000/api"+"/teacher/".concat(localStorage.getItem("Id"),"/profile"),{method:"GET"}).then((function(e){return e.json()})).then((function(e){var t,n,o,i,d;t=e,n=document.getElementById("profileId"),o=document.getElementById("profileFirstName"),i=document.getElementById("profileLastName"),d=document.getElementById("profileEmail"),n.innerText=t.id,o.innerText=t.first_name,i.innerText=t.last_name,d.innerText=t.email}))}));
+//# sourceMappingURL=profile.613fe9bf.js.map
