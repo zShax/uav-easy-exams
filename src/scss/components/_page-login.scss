@@ -69,5 +69,9 @@
 
     @include flex(column, center, center);
     gap: 0.75em;
+
+    & > input {
+      margin-top: 2em;
+    }
   }
 }

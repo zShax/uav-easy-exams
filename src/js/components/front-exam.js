@@ -5,7 +5,7 @@ import { baseURL } from '../index';
 let formExamAnswers = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch(baseURL + '/exam/1', {
+  fetch(baseURL + `/exam/${localStorage.getItem('Id')}`, {
     method: 'GET',
   })
     .then(response => response.json())
